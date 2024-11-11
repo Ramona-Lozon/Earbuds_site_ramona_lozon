@@ -82,3 +82,17 @@
   });
 
 })();
+
+(() => {
+  
+  const divisor = document.querySelector("#divisor");
+  const slider = document.querySelector("#slider");
+
+  function moveDivisor() {
+      console.log(slider.value); //reads slider value
+      divisor.style.width = slider.value+"%" //reads slider and sets CSS width of the conatiner with the divisor id
+  }
+
+  slider.addEventListener("input", moveDivisor);
+
+})();
