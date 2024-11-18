@@ -33,7 +33,8 @@ gsap.to(buds, {
       pin: true,
       scrub: 1, 
       markers: true,
-      start: "top top"
+      start: "top 5%",
+      end: "bottom 5%"
   },
   onUpdate: render
 })
@@ -150,6 +151,25 @@ function render() {
   }
 
   slider.addEventListener("input", moveDivisor);
+
+})();
+
+//greensock animation    
+
+(() => {
+gsap.to("#text-box", 
+  3,
+  {
+      scrollTrigger:{
+          trigger: "#text-box", //onEnter onLeave onEnterBack onLeaveBack
+          toggleActions: "play reset play reset", //to make it disapear mess with these 
+          markers: false, 
+          start: "top 80%", //animation box start, scroller start
+          end: "bottom 30%" //animation box end, scroller end
+      },
+      autoAlpha:1, 
+  }
+)
 
 })();
 

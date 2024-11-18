@@ -1,0 +1,15 @@
+.box-animation {
+    visibility: hidden;
+}
+
+#text-box {
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+
+   p {
+    width: 80vw;
+    text-align: center;
+   }
+
+}

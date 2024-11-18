@@ -1,8 +1,23 @@
 #explode-view {
     max-width: 100%;
-    /* width: 100vw; */
+    min-width: 300px;
+    margin: 0px;
+    height: inherit;
   }
 
 #scroll-trigger-box {
-  height: 150vh;
+  padding: 0px 0px 0px 0px;
+}
+
+
+.pin-spacer {
+  height: 100px;
+}
+@media (max-width: 768px) {
+  
+}
+
+
+@media (max-width: 1200px) {
+  
 }

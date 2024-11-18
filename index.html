@@ -15,41 +15,87 @@
         </div>
 
 <!-- scroll based animation -->
-        <div id="scroll-trigger-box" class="col-span-full">
-          <canvas id="explode-view"></canvas> 
+        <div id="scroll-trigger-box" class="grid-con">
+          <canvas class="col-span-full" id="explode-view"></canvas> 
+      </div>
+
+      <div class="box-animation" id="text-box">
+        <p>
+          8Track Earbuds offer a perfect blend of style, sound, and comfort for music lovers on the go. With high-quality audio, crisp bass, and noise isolation, these earbuds deliver an immersive listening experience. The sleek, ergonomic design ensures a secure fit, while the tangle-free cords and durable construction make them ideal for everyday use. Whether you're commuting, working out, or relaxing, 8Track Earbuds are the ideal companion for your music.
+        </p>
       </div>
 
 
     </div>
 
     <!-- my model viewer -->
-    <model-viewer src="model/Ramona_Earbud_GLBfix.glb" ar ar-modes="scene-viewer webxr quick-look" camera-controls tone-mapping="neutral" poster="images/poster.webp" shadow-intensity="1">
+    <model-viewer 
+      src="model/Ramona_Earbud_GLBfix.glb" 
+        ar ar-modes="scene-viewer webxr quick-look" 
+          camera-controls tone-mapping="neutral" \
+            poster="images/poster.webp" 
+              shadow-intensity="1">
       
-          <!--play/pause button-->
-      <button class="Hotspot" slot="hotspot-1" data-position="2.1822354477041044m 33.75299415774094m -3.2511592224892234m" data-normal="-0.00010273255233609394m -0.00004526624735332513m 0.9999999936984949m" data-visibility-attribute="visible">
-          <div class="HotspotAnnotation" id="hotspot-1">
-            </div>
+      <button 
+        class="Hotspot mobile-hotspot-hider" 
+        slot="hotspot-1" 
+        data-position="2.1822354477041044m 33.75299415774094m -3.2511592224892234m" 
+        data-normal="-0.00010273255233609394m -0.00004526624735332513m 0.9999999936984949m" 
+        data-visibility-attribute="visible">
+          <div 
+            class="HotspotAnnotation" 
+            id="hotspot-1">
+          </div>
         </button>
 
-          <button class="Hotspot" slot="hotspot-2" data-position="7.640996431765556m 33.51788404217785m -6.098974882812706m" data-normal="0.9999999999999996m 0m 3.4228542950295595e-8m" data-visibility-attribute="visible">
-          <div class="HotspotAnnotation" id="hotspot-2">
+          <button 
+            class="Hotspot mobile-hotspot-hider" 
+            slot="hotspot-2" 
+            data-position="7.640996431765556m 33.51788404217785m -6.098974882812706m" 
+            data-normal="0.9999999999999996m 0m 3.4228542950295595e-8m" 
+            data-visibility-attribute="visible">
+            <div 
+              class="HotspotAnnotation" 
+              id="hotspot-2">
             </div>
         </button>
         
-        <button class="Hotspot" slot="hotspot-3" data-position="1.6150894624334962m 35.75776259669098m -4.631558299143716m" data-normal="-0.6935199579089607m 0.6935198989775768m -0.19509028090626443m" data-visibility-attribute="visible">
-          <div class="HotspotAnnotation" id="hotspot-3">
+        <button 
+          class="Hotspot mobile-hotspot-hider" 
+          slot="hotspot-3" 
+          data-position="1.6150894624334962m 35.75776259669098m -4.631558299143716m" 
+          data-normal="-0.6935199579089607m 0.6935198989775768m -0.19509028090626443m" 
+          data-visibility-attribute="visible">
+            <div 
+              class="HotspotAnnotation" 
+              id="hotspot-3">
             </div>
         </button>
             
-            <button class="Hotspot" slot="hotspot-4" data-position="0.5294603700505216m 33.45184541288153m -4.909529394288297m" data-normal="-0.9999999999999996m 0m -3.4228542950295595e-8m" data-visibility-attribute="visible">
-          <div class="HotspotAnnotation" id="hotspot-4">
-            </div>
+            <button 
+              class="Hotspot mobile-hotspot-hider" 
+              slot="hotspot-4" 
+              data-position="0.5294603700505216m 33.45184541288153m -4.909529394288297m" 
+              data-normal="-0.9999999999999996m 0m -3.4228542950295595e-8m" 
+              data-visibility-attribute="visible">
+                <div 
+                  class="HotspotAnnotation" 
+                  id="hotspot-4">
+                </div>
         </button>
         
-        <button class="Hotspot" slot="hotspot-5" data-position="3.320899500495706m 22.341356787830595m -3.9860153115278005m" data-normal="0m -1m 0m" data-visibility-attribute="visible">
-          <div class="HotspotAnnotation" id="hotspot-5">            
+        <button 
+          class="Hotspot mobile-hotspot-hider" 
+          slot="hotspot-5" 
+          data-position="3.320899500495706m 22.341356787830595m -3.9860153115278005m" 
+          data-normal="0m -1m 0m" 
+          data-visibility-attribute="visible">
+          <div 
+            class="HotspotAnnotation" 
+            id="hotspot-5">            
           </div>
         </button>
+
       <div class="progress-bar hide" slot="progress-bar">
           <div class="update-bar"></div>
       </div>
@@ -62,13 +108,58 @@
       </div>
   </model-viewer>
 
+  <!--mobile annotations-->
+  <section class="mobile-hotspots">
+    
+    <!-- hotspot 1 -->
+    <div class="mobile-info-box">
+        <div>
+          <h2>Play/Pause Button</h2>
+          <p>press this to pause and play music, double tapping it</p>
+        </div>
+      <img src="images/hotspot-1.jpg">
+    </div>
+
+    <!-- hotspot 2 -->
+    <div class="mobile-info-box">
+        <div>
+          <h2>High Fidelity Speaker</h2>
+          <p>a small yet powerful high fidelity speaker.</p>
+        </div>
+      <img src="images/hotspot-2.jpg">
+    </div>
+
+    <!-- hotspot 3 -->
+    <div class="mobile-info-box">
+        <div>
+          <h2>Pressure Equalizer</h2>
+          <p>a port that allows airflow for the speaker, reducing background noise.</p>
+        </div>
+      <img src="images/hotspot-3.jpg">
+    </div>
+
+    <!-- hotspot 4 -->
+    <div class="mobile-info-box">
+        <div>
+          <h2>Quick Charge Power Jacks</h2>
+          <p>high powered charging jacks that charge the headphones in minutes.</p>
+        </div>
+      <img src="images/hotspot-4.jpg">
+    </div>
+
+    <!-- hotspot 5 -->
+    <div class="mobile-info-box">
+        <div>
+          <h2>Extra Power Jacks</h2>
+          <p>an alternate powrt for charging your headphones that works with a variety of containers.</p>
+        </div>
+      <img src="images/hotspot-5.jpg">
+    </div>
+  </section>
+
   <div class="grid-con">
 
     <div class="col-span-full">
-        <div id="mobile-tablet-view">
-            <!-- <img src="images/Earbuds-Retro-x-ray-clear.jpg" alt="x-ray view of earbud">
-            <img src="images/Earbuds-Retro-xray-opaque.jpg" alt="regular view of earbud"> -->
-        </div>
 
         <!-- xray slider -->
         <div id="comparison-con">
