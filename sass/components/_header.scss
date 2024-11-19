@@ -1,0 +1,27 @@
+@use "../abstracts" as a;
+
+header {
+    background-color: rgba(105, 105, 105, 0.1);
+    height: 120px;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    position: sticky;
+    align-items: center;
+    z-index: 1;
+     img{
+        width: 100px;
+        margin: 15px;
+     }
+     nav {
+        margin-left: auto;
+        a {
+            text-decoration: none;
+            color: a.$retro-orange;
+            margin: 0px 20px 0px 20px;
+            font-family: "Exo 2", sans-serif;
+        }
+
+
+     }
+}

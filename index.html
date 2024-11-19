@@ -4,37 +4,54 @@
     <title>8TRACK Buds</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Saira+Stencil+One&display=swap" rel="stylesheet">
     <link href="sass/main.css" rel="stylesheet"/>
     <link href="css/grid.css" rel="stylesheet"/>
     <!-- link to greensock main library and scroll plugin -->
   </head>
+
+
+<header>
+<img src="images/logo-01.svg">
+<nav id="navLinks">
+  <a href="#details">details</a>
+  <a href="#model-viewer">model viewer</a>
+  <a href="#x-ray-viewer">X-Ray Viewer</a>
+</nav>
+</header>
+
   <body>
 
+    <section class="hero">
     <div class="title">
         <h2>8TRACK buds</h2>
         </div>
+      </section>
 
 <!-- scroll based animation -->
         <div id="scroll-trigger-box" class="grid-con">
           <canvas class="col-span-full" id="explode-view"></canvas> 
       </div>
-
+  <section id="details">
       <div class="box-animation" id="text-box">
         <p>
           8Track Earbuds offer a perfect blend of style, sound, and comfort for music lovers on the go. With high-quality audio, crisp bass, and noise isolation, these earbuds deliver an immersive listening experience. The sleek, ergonomic design ensures a secure fit, while the tangle-free cords and durable construction make them ideal for everyday use. Whether you're commuting, working out, or relaxing, 8Track Earbuds are the ideal companion for your music.
         </p>
       </div>
-
+    </section>
 
     </div>
 
     <!-- my model viewer -->
     <model-viewer 
-      src="model/Ramona_Earbud_GLBfix.glb" 
-        ar ar-modes="scene-viewer webxr quick-look" 
-          camera-controls tone-mapping="neutral" \
-            poster="images/poster.webp" 
-              shadow-intensity="1">
+      id="model-viewer"
+        src="model/Ramona_Earbud_GLBfix.glb" 
+          ar ar-modes="scene-viewer webxr quick-look" 
+            camera-controls tone-mapping="neutral" \
+              poster="images/poster.webp" 
+                shadow-intensity="1">
       
       <button 
         class="Hotspot mobile-hotspot-hider" 
@@ -157,7 +174,7 @@
     </div>
   </section>
 
-  <div class="grid-con">
+  <div id="x-ray-viewer" class="grid-con">
 
     <div class="col-span-full">
 
@@ -172,11 +189,16 @@
         </div>
     </div>
 
+<footer>
+  <img src="images/logo-01.svg">
+</footer>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/ScrollTrigger.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

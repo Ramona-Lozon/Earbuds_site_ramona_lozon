@@ -1,11 +1,31 @@
+@use "../abstracts" as a;
+
 body {
-    background-color: white;
+    background-color: black;
+    color:a.$retro-orange;
+    font-family: "Exo 2", sans-serif;
+}
+
+.hero {
+    display: flex;
+    align-content: center;
+    text-align: center;
+    align-items: center;
+    margin: 100px auto 100px auto;
 }
 
 .title {
     text-align: center;
-    color:#E89B36;
-    font-family: Futura, Helvetica Neue, sans-serif;
-    margin: 100px;
+    align-items: center;
+    color:a.$retro-orange;
+    font-family: "Exo 2", sans-serif;
+    margin: 0px;
+    background-image: url("../../images/render-hero.png");
+    background-size: 100vw;
+    width: 100vw;
+    aspect-ratio: 16/9;
+    h2 {
+        z-index: 10;
+    }
+    
 }
-
