@@ -1,7 +1,7 @@
 @use "../abstracts" as a;
 
 header {
-    background-color: rgba(105, 105, 105, 0.1);
+    background-color: none;
     height: 120px;
     top: 0;
     display: flex;
@@ -12,16 +12,35 @@ header {
      img{
         width: 100px;
         margin: 15px;
+        opacity:0.2;
      }
      nav {
         margin-left: auto;
         a {
             text-decoration: none;
             color: a.$retro-orange;
+            opacity: 0.2;
             margin: 0px 20px 0px 20px;
             font-family: "Exo 2", sans-serif;
         }
 
 
      }
+}
+
+header {
+
+    img:hover {
+      opacity: 01;
+      transition: 0.2s;
+      cursor: pointer;
+    }
+    nav {
+       a:hover {
+           opacity: 01;
+           transition: 0.2s;
+       }
+
+
+    }
 }

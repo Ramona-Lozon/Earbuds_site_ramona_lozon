@@ -2,9 +2,20 @@
     visibility: hidden;
 }
 
+.details-video {
+    max-width: 400px;
+    max-height: 400px; 
+    width: 80vw;
+    display: block; 
+    margin: 0 auto; 
+  }
+  
+
 #text-box {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     margin: 50px;
     position: relative;
     right: 100px;
@@ -13,4 +24,19 @@
     text-align: center;
    }
 
+}
+
+@media (min-width: 768px) {
+  
+}
+
+
+@media (min-width: 1200px) {
+    #text-box {
+        flex-direction: row;
+        width: 80vw;
+        p {
+            width: 40vw;
+        }
+    }
 }

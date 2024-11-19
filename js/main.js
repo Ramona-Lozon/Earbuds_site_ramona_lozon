@@ -163,7 +163,7 @@ function render() {
         scrollTrigger:{
             trigger: "#hero-title",
             toggleActions: "play reverse play reset", 
-            markers: true, 
+            markers: false, 
             start: "top 80%", //animation box start, scroller start
           end: "bottom 30%" //animation box end, scroller end
         },
@@ -190,12 +190,93 @@ gsap.to("#text-box", 3,
 
 })();
 
+//greensock animation mobile hotspots    
+
+(() => {
+  gsap.to("#mobile-hotspot-1", 3,
+    {
+        scrollTrigger:{
+            trigger: "#mobile-hotspot-1",
+            toggleActions: "play reverse play reset", 
+            markers: false,
+            start: "top 90%",
+            end: "bottom 30%"
+        },
+        autoAlpha:1,
+        duration: 0.02, 
+    });
+  
+  })();
+
+  (() => {
+    gsap.to("#mobile-hotspot-2", 3,
+      {
+          scrollTrigger:{
+              trigger: "#mobile-hotspot-2",
+              toggleActions: "play reverse play reset", 
+              markers: false,
+              start: "top 80%",
+              end: "bottom 30%"
+          },
+          autoAlpha:1,
+          duration: 0.02, 
+      });
+    
+    })();
+
+    (() => {
+      gsap.to("#mobile-hotspot-3", 3,
+        {
+            scrollTrigger:{
+                trigger: "#mobile-hotspot-3",
+                toggleActions: "play reverse play reset", 
+                markers: false,
+                start: "top 80%",
+                end: "bottom 30%"
+            },
+            autoAlpha:1,
+            duration: 0.02, 
+        });
+      
+      })();
+
+      (() => {
+        gsap.to("#mobile-hotspot-4", 3,
+          {
+              scrollTrigger:{
+                  trigger: "#mobile-hotspot-4",
+                  toggleActions: "play reverse play reset", 
+                  markers: false,
+                  start: "top 80%",
+                  end: "bottom 30%"
+              },
+              autoAlpha:1,
+              duration: 0.02, 
+          });
+        
+        })();
+
+        (() => {
+          gsap.to("#mobile-hotspot-5", 3,
+            {
+                scrollTrigger:{
+                    trigger: "#mobile-hotspot-5",
+                    toggleActions: "play reverse play reset", 
+                    markers: false,
+                    start: "top 80%",
+                    end: "bottom 30%"
+                },
+                autoAlpha:1,
+                duration: 0.02, 
+            });
+          
+          })();
 //greensock scrollto
 (() => {
 
   gsap.registerPlugin(ScrollToPlugin)
 
-  const navLinks = document.querySelectorAll("#navLinks a")
+  const navLinks = document.querySelectorAll("#navLinks a, header a")
 
   console.log(navLinks);
 
@@ -204,7 +285,7 @@ function scrollLink(e){
   //prevent this default behaviour/jumping
   e.preventDefault();
   let selectedLink = e.currentTarget.hash;
-  gsap.to(window, {duration: 1, scrollTo:{y: `${selectedLink}`, offsetY: 50}});
+  gsap.to(window, {duration: 1, scrollTo:{y: `${selectedLink}`, offsetY: 0}});
 }
 
   navLinks.forEach((link) => {

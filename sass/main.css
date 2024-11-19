@@ -8,6 +8,14 @@
   margin: 200px auto 500px auto;
 }
 
+.section-title {
+  text-align: center;
+}
+.section-title h2 {
+  margin: 150px auto 100px auto;
+  font-size: 32px;
+}
+
 model-viewer {
   width: auto;
   max-width: 1200px;
@@ -15,6 +23,7 @@ model-viewer {
   background-color: rgba(65, 65, 65, 0.514);
   margin: 0 auto;
   border-radius: 15px;
+  overflow: visible;
 }
 
 .mobile-hotspot-hider {
@@ -29,18 +38,22 @@ model-viewer {
 }
 
 .mobile-info-box {
+  visibility: hidden;
   display: flex;
   flex-direction: row;
-  margin: 15px;
+  margin: 5px;
 }
 .mobile-info-box div {
   display: flex;
   flex-direction: column;
-  width: 150px;
-  margin: 10px;
+  width: 40vw;
+  margin: 5px;
+  align-items: center;
+  justify-content: center;
 }
 .mobile-info-box img {
-  height: 150px;
+  height: 40vw;
+  border-radius: 15px;
 }
 
 @media (min-width: 768px) {
@@ -79,6 +92,7 @@ model-viewer {
     top: 50%;
     width: max-content;
     text-align: left;
+    z-index: 10;
   }
   .HotspotAnnotation p {
     color: #E89B36;
@@ -255,9 +269,19 @@ input[type=range]:focus::-moz-range-thumb {
   visibility: hidden;
 }
 
+.details-video {
+  max-width: 400px;
+  max-height: 400px;
+  width: 80vw;
+  display: block;
+  margin: 0 auto;
+}
+
 #text-box {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   margin: 50px;
   position: relative;
   right: 100px;
@@ -267,8 +291,17 @@ input[type=range]:focus::-moz-range-thumb {
   text-align: center;
 }
 
+@media (min-width: 1200px) {
+  #text-box {
+    flex-direction: row;
+    width: 80vw;
+  }
+  #text-box p {
+    width: 40vw;
+  }
+}
 header {
-  background-color: rgba(105, 105, 105, 0.1);
+  background-color: none;
   height: 120px;
   top: 0;
   display: flex;
@@ -280,6 +313,7 @@ header {
 header img {
   width: 100px;
   margin: 15px;
+  opacity: 0.2;
 }
 header nav {
   margin-left: auto;
@@ -287,8 +321,19 @@ header nav {
 header nav a {
   text-decoration: none;
   color: #E89B36;
+  opacity: 0.2;
   margin: 0px 20px 0px 20px;
   font-family: "Exo 2", sans-serif;
+}
+
+header img:hover {
+  opacity: 1;
+  transition: 0.2s;
+  cursor: pointer;
+}
+header nav a:hover {
+  opacity: 1;
+  transition: 0.2s;
 }
 
 footer {
