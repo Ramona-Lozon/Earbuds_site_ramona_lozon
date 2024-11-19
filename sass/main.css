@@ -90,6 +90,7 @@ model-viewer {
     padding: 0.5em 1em;
     position: absolute;
     top: 50%;
+    width: -moz-max-content;
     width: max-content;
     text-align: left;
     z-index: 10;
@@ -171,9 +172,16 @@ model-viewer {
     animation: circle 4s linear infinite;
   }
 }
+#x-ray-viewer {
+  width: auto;
+  max-width: 1200px;
+  align-items: center;
+  margin: 0px auto 0px auto;
+}
+
 #comparison-con {
   display: block;
-  margin: 100px 0px 100px 0px;
+  margin: 100px auto 100px auto;
 }
 
 #xray {
@@ -181,6 +189,7 @@ model-viewer {
   aspect-ratio: 16/9;
   background-image: url(../images/Earbuds-Retro-x-ray-clear.jpg);
   background-size: cover;
+  width: auto;
   border-radius: 15px;
 }
 
@@ -265,6 +274,12 @@ input[type=range]:focus::-moz-range-thumb {
   height: 100px;
 }
 
+#details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .box-animation {
   visibility: hidden;
 }
@@ -282,7 +297,9 @@ input[type=range]:focus::-moz-range-thumb {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 50px;
+  width: auto;
+  max-width: 1200px;
+  margin: 0px auto 0px auto;
   position: relative;
   right: 100px;
 }
