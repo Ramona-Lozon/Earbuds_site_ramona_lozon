@@ -259,6 +259,8 @@ input[type=range]:focus::-moz-range-thumb {
   display: flex;
   justify-content: center;
   margin: 50px;
+  position: relative;
+  right: 100px;
 }
 #text-box p {
   width: 80vw;
@@ -323,6 +325,20 @@ body {
   width: 100vw;
   aspect-ratio: 16/9;
 }
-.title h2 {
-  z-index: 10;
+.title div {
+  position: relative;
+  top: 48%;
+}
+
+@media (min-width: 768px) {
+  .title div {
+    position: relative;
+    top: 50%;
+  }
+}
+@media (min-width: 1200px) {
+  .title div {
+    position: relative;
+    top: 50%;
+  }
 }/*# sourceMappingURL=main.css.map */
