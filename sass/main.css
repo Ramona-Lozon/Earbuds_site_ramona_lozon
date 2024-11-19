@@ -8,11 +8,16 @@
   margin: 200px auto 500px auto;
 }
 
+#model-viewer-section {
+  background-color: rgba(65, 65, 65, 0.5);
+  padding: 50px 0px 50px 0px;
+}
+
 .section-title {
   text-align: center;
 }
 .section-title h2 {
-  margin: 150px auto 100px auto;
+  margin: 0px auto 100px auto;
   font-size: 32px;
 }
 
@@ -20,8 +25,8 @@ model-viewer {
   width: auto;
   max-width: 1200px;
   height: 500px;
-  background-color: rgba(65, 65, 65, 0.514);
-  margin: 0 auto;
+  background-color: black;
+  margin: 0px auto 0px auto;
   border-radius: 15px;
   overflow: visible;
 }
@@ -73,6 +78,7 @@ model-viewer {
   .Hotspot:not([data-visible]) {
     opacity: 0;
     pointer-events: none;
+    overflow: visible;
   }
   .HotspotAnnotation {
     visibility: hidden;
@@ -94,6 +100,7 @@ model-viewer {
     width: max-content;
     text-align: left;
     z-index: 10;
+    overflow: visible;
   }
   .HotspotAnnotation p {
     color: #E89B36;
@@ -176,7 +183,7 @@ model-viewer {
   width: auto;
   max-width: 1200px;
   align-items: center;
-  margin: 0px auto 0px auto;
+  margin: 50px auto 50px auto;
 }
 
 #comparison-con {
@@ -354,7 +361,7 @@ header nav a:hover {
 }
 
 footer {
-  background-color: rgba(105, 105, 105, 0.1);
+  background-color: rgba(65, 65, 65, 0.5);
   height: 300px;
 }
 footer img {

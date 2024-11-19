@@ -1,7 +1,14 @@
+@use "../abstracts" as a;
+
+#model-viewer-section {
+  background-color: a.$pale-gray;
+  padding: 50px 0px 50px 0px;
+}
+  
   .section-title {
     text-align: center;
       h2 {
-      margin: 150px auto 100px auto;
+      margin: 0px auto 100px auto;
       font-size: 32px;
       }
     } 
@@ -10,8 +17,8 @@
     width: auto;
     max-width: 1200px;
     height: 500px;
-    background-color: rgba(65, 65, 65, 0.514);
-    margin: 0 auto;
+    background-color: black;
+    margin: 0px auto 0px auto;
     border-radius: 15px;
     overflow: visible;
   }
@@ -68,6 +75,7 @@
     .Hotspot:not([data-visible]) {
       opacity: 0;
       pointer-events: none;
+      overflow: visible;
     }
   
     .HotspotAnnotation{
@@ -89,6 +97,7 @@
       width: max-content;
       text-align: left;
       z-index: 10;
+      overflow: visible;
     }
   
     .HotspotAnnotation p {
