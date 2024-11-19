@@ -18,14 +18,37 @@ body {
     text-align: center;
     align-items: center;
     color:a.$retro-orange;
+
     font-family: "Exo 2", sans-serif;
     margin: 0px;
     background-image: url("../../images/render-hero.png");
     background-size: 100vw;
     width: 100vw;
     aspect-ratio: 16/9;
-    h2 {
-        z-index: 10;
+    div {
+        position: relative;
+        top: 48%;
     }
     
+}
+
+@media (min-width: 768px) {
+    .title {
+        div {
+            position: relative;
+            top: 50%;
+        }
+        
+    }
+}
+
+
+@media (min-width: 1200px) {
+    .title {
+        div {
+            position: relative;
+            top: 50%;
+        }
+        
+    }
 }
