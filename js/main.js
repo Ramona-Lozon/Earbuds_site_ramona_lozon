@@ -32,7 +32,7 @@ gsap.to(buds, {
       trigger: "#scroll-trigger-box",
       pin: true,
       scrub: 1, 
-      markers: true,
+      markers: false,
       start: "top 5%",
       end: "bottom 5%"
   },
@@ -173,3 +173,24 @@ gsap.to("#text-box",
 
 })();
 
+//greensock scrollto
+(() => {
+
+  gsap.registerPlugin(ScrollToPlugin)
+
+  const navLinks = document.querySelectorAll("#navLinks a")
+
+  console.log(navLinks);
+
+function scrollLink(e){
+  console.log(e.currentTarget.hash);
+  //prevent this default behaviour/jumping
+  e.preventDefault();
+  let selectedLink = e.currentTarget.hash;
+  gsap.to(window, {duration: 1, scrollTo:{y: `${selectedLink}`, offsetY: 50}});
+}
+
+  navLinks.forEach((link) => {
+      link.addEventListener("click", scrollLink);
+  })
+})();
