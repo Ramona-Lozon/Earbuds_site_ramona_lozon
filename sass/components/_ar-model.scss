@@ -70,6 +70,7 @@
       width: 45px;
       height: 38px;
       transition: all 1s ease-in-out;
+      overflow: visible;
     }
   
     .Hotspot:not([data-visible]) {
@@ -84,7 +85,8 @@
       border-radius: 15px;
       box-shadow: 0 2px 4px #E89B36;
       color: #E89B36;
-      display: block;
+      display: flex;
+      flex-direction: column;
       font-family: Futura, Helvetica Neue, sans-serif;
       font-size: 18px;
       font-weight: 700;
@@ -96,6 +98,7 @@
       top: 50%;
       width: max-content;
       text-align: left;
+    
       z-index: 10;
       overflow: visible;
     }
@@ -113,7 +116,8 @@
   
     .HotspotAnnotation img {
       border-radius: 10px;
-      width: 300px;
+      width: 150px;
+      height: auto;
     }
   
     model-viewer::part(default-progress-bar) {
