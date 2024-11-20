@@ -52,6 +52,29 @@ function render() {
 })();
 
 
+//lightbox
+(() => {
+const lightBox = document.querySelector("#lightbox");
+const lightBoxTrigger = document.querySelector("#hamburger");
+const closeBtn = document.querySelectorAll('#close-button, .lightboxLink');
+
+function openLightbox() {
+  console.log('open lightbox')
+  lightBox.style.display = 'flex';
+}
+
+function closeLightbox() {
+  console.log('close lightbox')
+  lightBox.style.display = 'none';
+}
+
+lightBoxTrigger.addEventListener('click', openLightbox);
+closeBtn.forEach(Btn => {
+Btn.addEventListener('click', closeLightbox);
+});
+
+})();
+
 //3d model viewer
 (() => {
 
@@ -276,7 +299,7 @@ gsap.to("#text-box", 3,
 
   gsap.registerPlugin(ScrollToPlugin)
 
-  const navLinks = document.querySelectorAll("#navLinks a, header a")
+  const navLinks = document.querySelectorAll("#navLinks a, header a, .lightboxLink")
 
   console.log(navLinks);
 

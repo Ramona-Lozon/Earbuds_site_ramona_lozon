@@ -1,3 +1,5 @@
+@use "../abstracts" as a;
+
 #details {
     display: flex;
     flex-direction: column;
@@ -24,12 +26,15 @@
     align-items: center;
     width: auto;
     max-width: 1200px;
-    margin: 0px auto 0px auto;
+    margin: 0px auto 50px auto;
     position: relative;
     right: 100px;
    p {
     width: 80vw;
     text-align: center;
+    background-color: a.$pale-gray;
+    border-radius: 15px;
+    padding: 10px;
    }
 
 }
