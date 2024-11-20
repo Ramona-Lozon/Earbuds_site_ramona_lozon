@@ -8,13 +8,27 @@
   margin: 200px auto 500px auto;
 }
 
+#model-viewer-section {
+  background-color: rgba(65, 65, 65, 0.5);
+  padding: 50px 0px 50px 0px;
+}
+
+.section-title {
+  text-align: center;
+}
+.section-title h2 {
+  margin: 0px auto 100px auto;
+  font-size: 32px;
+}
+
 model-viewer {
   width: auto;
   max-width: 1200px;
   height: 500px;
-  background-color: rgba(65, 65, 65, 0.514);
-  margin: 0 auto;
+  background-color: black;
+  margin: 0px auto 0px auto;
   border-radius: 15px;
+  overflow: visible;
 }
 
 .mobile-hotspot-hider {
@@ -29,18 +43,22 @@ model-viewer {
 }
 
 .mobile-info-box {
+  visibility: hidden;
   display: flex;
   flex-direction: row;
-  margin: 15px;
+  margin: 5px;
 }
 .mobile-info-box div {
   display: flex;
   flex-direction: column;
-  width: 150px;
-  margin: 10px;
+  width: 40vw;
+  margin: 5px;
+  align-items: center;
+  justify-content: center;
 }
 .mobile-info-box img {
-  height: 150px;
+  height: 40vw;
+  border-radius: 15px;
 }
 
 @media (min-width: 768px) {
@@ -56,10 +74,12 @@ model-viewer {
     width: 45px;
     height: 38px;
     transition: all 1s ease-in-out;
+    overflow: visible;
   }
   .Hotspot:not([data-visible]) {
     opacity: 0;
     pointer-events: none;
+    overflow: visible;
   }
   .HotspotAnnotation {
     visibility: hidden;
@@ -67,7 +87,8 @@ model-viewer {
     border-radius: 15px;
     box-shadow: 0 2px 4px #E89B36;
     color: #E89B36;
-    display: block;
+    display: flex;
+    flex-direction: column;
     font-family: Futura, Helvetica Neue, sans-serif;
     font-size: 18px;
     font-weight: 700;
@@ -79,6 +100,8 @@ model-viewer {
     top: 50%;
     width: max-content;
     text-align: left;
+    z-index: 10;
+    overflow: visible;
   }
   .HotspotAnnotation p {
     color: #E89B36;
@@ -91,7 +114,8 @@ model-viewer {
   }
   .HotspotAnnotation img {
     border-radius: 10px;
-    width: 300px;
+    width: 150px;
+    height: auto;
   }
   model-viewer::part(default-progress-bar) {
     height: 30px;
@@ -157,9 +181,16 @@ model-viewer {
     animation: circle 4s linear infinite;
   }
 }
+#x-ray-viewer {
+  width: auto;
+  max-width: 1200px;
+  align-items: center;
+  margin: 50px auto 50px auto;
+}
+
 #comparison-con {
   display: block;
-  margin: 100px 0px 100px 0px;
+  margin: 100px auto 100px auto;
 }
 
 #xray {
@@ -167,6 +198,7 @@ model-viewer {
   aspect-ratio: 16/9;
   background-image: url(../images/Earbuds-Retro-x-ray-clear.jpg);
   background-size: cover;
+  width: auto;
   border-radius: 15px;
 }
 
@@ -229,11 +261,11 @@ input[type=range]::-moz-range-thumb {
 }
 
 input[type=range]:focus::-webkit-slider-thumb {
-  background: rgba(255, 255, 255, 0.5);
+  background: #E89B36;
 }
 
 input[type=range]:focus::-moz-range-thumb {
-  background: rgba(255, 255, 255, 0.5);
+  background: #E89B36;
 }
 
 #explode-view {
@@ -251,25 +283,55 @@ input[type=range]:focus::-moz-range-thumb {
   height: 100px;
 }
 
+#details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .box-animation {
   visibility: hidden;
 }
 
+.details-video {
+  max-width: 400px;
+  max-height: 400px;
+  width: 80vw;
+  display: block;
+  margin: 0 auto;
+}
+
 #text-box {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  margin: 50px;
+  align-items: center;
+  width: auto;
+  max-width: 1200px;
+  margin: 0px auto 50px auto;
   position: relative;
   right: 100px;
 }
 #text-box p {
   width: 80vw;
   text-align: center;
+  background-color: rgba(65, 65, 65, 0.5);
+  border-radius: 15px;
+  padding: 10px;
 }
 
+@media (min-width: 1200px) {
+  #text-box {
+    flex-direction: row;
+    width: 80vw;
+  }
+  #text-box p {
+    width: 40vw;
+  }
+}
 header {
-  background-color: rgba(105, 105, 105, 0.1);
-  height: 120px;
+  background-color: none;
+  height: 100px;
   top: 0;
   display: flex;
   flex-direction: row;
@@ -280,19 +342,79 @@ header {
 header img {
   width: 100px;
   margin: 15px;
+  opacity: 0.2;
+}
+header #hamburger {
+  display: flex;
+  height: 50px;
+  margin-left: auto;
 }
 header nav {
   margin-left: auto;
+  display: none;
 }
 header nav a {
   text-decoration: none;
   color: #E89B36;
+  opacity: 0.2;
   margin: 0px 20px 0px 20px;
   font-family: "Exo 2", sans-serif;
 }
 
+header img:hover {
+  opacity: 1;
+  transition: 0.2s;
+  cursor: pointer;
+}
+header nav a:hover {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(65, 65, 65, 0.9);
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.lightbox a {
+  text-decoration: none;
+  color: #E89B36;
+  margin: 20px 0px 20px 0px;
+  font-family: "Exo 2", sans-serif;
+  font-size: 32px;
+}
+
+/* Close button style */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: #E89B36;
+  font-size: 36px;
+  font-weight: bold;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+@media (min-width: 768px) {
+  header nav {
+    display: flex;
+  }
+  header #hamburger {
+    display: none;
+  }
+}
 footer {
-  background-color: rgba(105, 105, 105, 0.1);
+  background-color: rgba(65, 65, 65, 0.5);
   height: 300px;
 }
 footer img {

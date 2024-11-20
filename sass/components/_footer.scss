@@ -1,5 +1,7 @@
+@use "../abstracts" as a;
+
 footer {
-    background-color: rgba(105, 105, 105, 0.1);
+    background-color: a.$pale-gray;
     height: 300px;
      img{
         width: 100px;

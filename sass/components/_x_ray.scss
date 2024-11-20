@@ -1,8 +1,15 @@
 @use "../abstracts" as a;
 
+#x-ray-viewer {
+  width: auto;
+  max-width: 1200px;
+  align-items: center;
+  margin: 50px auto 50px auto;
+}
+
 #comparison-con {
   display: block;
-  margin: 100px 0px 100px 0px;
+  margin: 100px auto 100px auto;
 }
 
 #xray {
@@ -10,6 +17,7 @@
   aspect-ratio: 16/9;
   background-image: url(../images/Earbuds-Retro-x-ray-clear.jpg);
   background-size: cover;
+  width: auto;
   border-radius: 15px;
 }
 
@@ -78,11 +86,11 @@ border-radius: 0;
 }
 
 input[type=range]:focus::-webkit-slider-thumb {
-background: rgba(255, 255, 255, 0.5);
+background: a.$retro-orange;
 }
 
 input[type=range]:focus::-moz-range-thumb {
-background: rgba(255, 255, 255, 0.5);
+background: a.$retro-orange;
 }
 
   @media (min-width: 1200px){
